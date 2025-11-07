@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Smart Route Rajkot</h1>
+    <p class="lead">Intelligent route planning for city buses with real-time traffic updates</p>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">🗺️ Smart Routing</h5>
+                <p class="card-text">Find the shortest and fastest route between any two points in Rajkot using advanced algorithms.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">🚦 Traffic Aware</h5>
+                <p class="card-text">Automatically avoid traffic congestion and roadblocks with real-time traffic data integration.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <h5 class="card-title">🚌 Bus Optimized</h5>
+                <p class="card-text">Specially designed for city bus drivers with easy-to-follow turn-by-turn directions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-controller="Home" asp-action="Map" class="btn btn-primary btn-lg">Start Route Planning</a>
+</div>

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Smart Route - Rajkot";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Route Planning</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="startLocation" class="form-label">Start Location</label>
+                        <input type="text" class="form-control" id="startLocation" placeholder="Click on map or enter address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="endLocation" class="form-label">End Location</label>
+                        <input type="text" class="form-control" id="endLocation" placeholder="Click on map or enter address">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="avoidTraffic" checked>
+                            <label class="form-check-label" for="avoidTraffic">
+                                Avoid Traffic & Congestion
+                            </label>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" id="calculateRoute">
+                        Calculate Route
+                    </button>
+                    <button type="button" class="btn btn-secondary w-100 mt-2" id="clearRoute">
+                        Clear Route
+                    </button>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6>Route Information</h6>
+                </div>
+                <div class="card-body">
+                    <div id="routeInfo">
+                        <p>Select start and end points to calculate route</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h6>Report Traffic</h6>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <select class="form-select" id="trafficLevel">
+                            <option value="1">Light Traffic</option>
+                            <option value="2">Moderate Traffic</option>
+                            <option value="3">Heavy Traffic</option>
+                            <option value="4">Road Blocked</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-warning w-100" id="reportTraffic">
+                        Report Traffic Here
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div id="map" style="height: 600px; border-radius: 8px;"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="~/js/map.js"></script>
+}
